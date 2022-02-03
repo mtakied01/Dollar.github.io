@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+    font-family: 'Lemonada', cursive;
+    font-family: 'Quicksand', sans-serif;
+}
+header{
+    background-color: #292626;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    font-size: 2.1em;
+    font-family: fantasy;
+    letter-spacing: 5px;
+    transition: .5s;
+}
+nav .logo:hover{
+    color: green;
+}
+nav .logo::after{
+    font-family: fantasy;
+    content: "$";
+    font-size: 2em;
+    color: gold;
+    margin-left: 2px;
+    transition: 0.75s;
+}
+nav .logo:hover::after{
+    margin-left: 15px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: 20px ;
+}
+li{
+    flex-wrap: nowrap;
+}
+li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: gold;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+li:hover::after{
+    width: 100%;
+}
+a{
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: .5s;
+}
+a:hover{
+    color: gold;
+}
+.dollar{
+    position: relative;
+    display: flex;
+    min-height: 90vh;
+    background:#eee;
+    justify-content: center;
+    align-items: center;
+}
+
+.dollar .circle{
+    position:relative;
+    border: 2px gold solid;
+    width: 338px;
+    height: 338px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.dollar .al{
+    color: transparent;
+    background:linear-gradient(transparent 50%,gold 50%);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    font-size: 20em;
+    font-family: fantasy;
+    position: absolute;
+    height: max-content;
+    -webkit-text-stroke: 0.3vw gold ;
+    z-index: 2;
+    animation: dollar 15s ease infinite;
+    transition: 3s all ease-in-out ;
+    
+}
+
+.dollar .al:hover{
+    
+   
+    
+    
+}
+.dollar .al:focus-within{
+    
+}
+.dollar .al::after{
+    content: attr(data-text);
+    width: 100%;
+    top:0;
+    left: 0;
+    height: 100%;
+    -webkit-text-stroke: 0vw gold ;
+    position: absolute;
+    overflow: hidden;
+    
+}
+@keyframes dollar {
+	0%{
+		background-position: 0 0%;
+        transform: rotateZ(0deg);
+	}
+    20%{
+		background-position: 0 50%;
+        transform: rotateZ(360deg);
+	}
+    40%{
+        background-position: 0 0%;
+        transform: rotateZ(0deg);
+
+    }
+    60%{
+		background-position: 0 50%;
+        transform: rotateZ(360deg);
+	}
+	90%{
+        transform: rotateZ(720deg);
+		background-position: 0 100%;
+	}
+
+
+}
+    
+
